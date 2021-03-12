@@ -17,11 +17,10 @@ import java.util.Scanner;
 
 public class notedefrais {
 	
-	public String nom;
-	public int somme;
-	public String raison;
-	public String date;
-
+	private String nom;
+	private int somme;
+	private String raison;
+	private String date;
 
 	
  static ArrayList<notedefrais> ListNote = new ArrayList<notedefrais>();	
@@ -60,14 +59,14 @@ public class notedefrais {
 		return this.date = date;
 	}
 		
-	public void deleteNoteDeFrais(String p) {
+	public static void deleteNoteDeFrais(String p) {
 		for(int i = 0 ; i < ListNote.size(); i++)
 			   if(ListNote.get(i).nom.equals(p)) {
 				   ListNote.remove(i);
 			   }
 	}
 	
-	public void updateNoteDeFrais(String p) {
+	public static void updateNoteDeFrais(String p) {
 		
 		  Scanner sc = new Scanner(System.in); 
 		  
@@ -123,7 +122,7 @@ public class notedefrais {
 	}
 	
 	
-	public  void trieTouteDate() throws ParseException{
+	public static void trieTouteDate() throws ParseException{
 				
 		List<Date> tabDate = new ArrayList<Date>();	
 		  
@@ -175,7 +174,7 @@ public class notedefrais {
 
 
 
-	public  void sommeNoteDeFraisTotal() {
+	public static void sommeNoteDeFraisTotal() {
 		int sum = 0;
 	
 	for(int i = 0; i < ListNote.size(); i++) {   
@@ -188,7 +187,7 @@ public class notedefrais {
 	
 	
 	
-	public  void fraisParAnnee() throws ParseException {
+	public static void fraisParAnnee() throws ParseException {
 		
 		 Scanner sc = new Scanner(System.in); 
 		 System.out.println("Saisir année souhaité");
@@ -315,13 +314,6 @@ public class notedefrais {
 		System.out.println("nombre de personne avec frais lors de ce mois/anneee ci :"+nbpersonne);
 		System.out.println("Nombre de personne avec des frais: "+ p );
 		System.out.println( "Somme total pour le mois: "+ sum);
-	}
-
-
-
-	@Override
-	public String toString() {
-		return "notedefrais [nom=" + nom + ", somme=" + somme + ", raison=" + raison + ", date=" + date + "]";
 	}
 	
 	

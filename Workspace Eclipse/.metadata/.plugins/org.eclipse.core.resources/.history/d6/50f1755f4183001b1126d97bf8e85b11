@@ -17,12 +17,23 @@ import java.util.Scanner;
 
 public class notedefrais {
 	
-	public String nom;
-	public int somme;
-	public String raison;
-	public String date;
+	private String nom;
+	private int somme;
+	private String raison;
+	private String date;
 
-
+interface Frais{
+	public void deleteNoteDeFrais(String p);
+	public void updateNoteDeFrais(String p);
+	public void showNoteDeFrais();
+	public void addNoteDeFrais();
+	public void trieTouteDate();
+	public  void sommeNoteDeFraisTotal();
+	public void fraisParAnnee();
+	public void fraisParMois();
+	public void fraisParMoisEtAnnee();
+	
+}
 	
  static ArrayList<notedefrais> ListNote = new ArrayList<notedefrais>();	
 	
@@ -315,13 +326,6 @@ public class notedefrais {
 		System.out.println("nombre de personne avec frais lors de ce mois/anneee ci :"+nbpersonne);
 		System.out.println("Nombre de personne avec des frais: "+ p );
 		System.out.println( "Somme total pour le mois: "+ sum);
-	}
-
-
-
-	@Override
-	public String toString() {
-		return "notedefrais [nom=" + nom + ", somme=" + somme + ", raison=" + raison + ", date=" + date + "]";
 	}
 	
 	

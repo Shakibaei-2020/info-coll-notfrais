@@ -20,8 +20,9 @@ public class accueil {
 		 SHAKIBAEI.setList(ntFrais);
 		 
 		 for (int i = 0; i < SHAKIBAEI.getList().size(); i++) {
-			 System.out.println(SHAKIBAEI.getList().get(i).toString());	
-		 }
+			 System.out.println(SHAKIBAEI.toString());
+			
+		}
 		 
 		 
 		 

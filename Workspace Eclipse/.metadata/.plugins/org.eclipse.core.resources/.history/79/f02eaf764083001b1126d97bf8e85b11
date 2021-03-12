@@ -1,0 +1,12 @@
+
+public interface Frais {
+	public void deleteNoteDeFrais(String p);
+	public void updateNoteDeFrais(String p);
+	public void showNoteDeFrais();
+	public void addNoteDeFrais();
+	public void trieTouteDate();
+	public void sommeNoteDeFraisTotal();
+	public void fraisParAnnee();
+	public void fraisParMois();
+	public void fraisParMoisEtAnnee();
+}
