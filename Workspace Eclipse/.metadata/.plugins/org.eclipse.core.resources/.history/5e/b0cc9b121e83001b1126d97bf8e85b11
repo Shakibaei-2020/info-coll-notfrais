@@ -1,0 +1,188 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Array;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+
+
+
+public class notedefrais {
+	
+	String nom;
+	int somme;
+	String raison;
+	
+	String date;
+
+	
+	 static ArrayList<notedefrais> ListNote = new ArrayList<notedefrais>();	
+	
+	 public notedefrais(String nom, int somme, String raison, String date) {
+	        this.nom = nom;
+	        this.somme = somme;
+	        this.raison = raison;
+	        this.date = date;
+	    }
+	 
+	 
+	 
+	public String getNom() {
+	return nom;
+	}
+	public String setNom(String nom) {
+		return this.nom = nom;
+	}
+	public int getSomme() {
+		return somme;
+	}
+	public int setSomme(int somme) {
+		return this.somme = somme;
+	}
+	public String getRaison() {
+		return raison;
+	}
+	public String setRaison(String raison) {
+		return this.raison = raison;
+	}
+	public String getDate() {
+		return date;
+	}
+	public String setDate(String date) {
+		return this.date = date;
+	}
+		
+	public static void deleteNoteDeFrais(String p) {
+		for(int i = 0 ; i < ListNote.size(); i++)
+			   if(ListNote.get(i).nom.equals(p)) {
+				   ListNote.remove(i);
+			   }
+	}
+	
+	public static void updateNoteDeFrais(String p) {
+		
+		  Scanner sc = new Scanner(System.in); 
+		  
+			System.out.println("Saisir nom");
+	        String nom = sc.nextLine(); 
+			System.out.println("Saisir somme");
+	        int somme = sc.nextInt(); 
+			System.out.println("Saisir raison");
+	        String raison = sc.nextLine(); 
+			System.out.println("Saisir date format dd/MM/yyyy");
+	        String date = sc.nextLine(); 
+
+			notedefrais e = new notedefrais(nom,somme,raison,date);
+      
+		for(int i = 0 ; i < ListNote.size(); i++)
+			   if(ListNote.get(i).nom.equals(p)) {
+				   ListNote.set(i,e);
+			   }
+	}
+	
+	
+	public static void showNoteDeFrais() {
+		for(int i = 0; i < ListNote.size(); i++) {   
+			System.out.println(ListNote.get(i).nom);
+			System.out.println(ListNote.get(i).somme);
+			System.out.println(ListNote.get(i).raison);
+			System.out.println(ListNote.get(i).date);
+		}
+	}
+	
+	public static void addNoteDeFrais() {
+		
+		 Scanner sc = new Scanner(System.in); 
+		 	
+			System.out.println("Saisir nom");
+	        String nom = sc.nextLine(); 
+			System.out.println("Saisir somme");
+	        int somme = sc.nextInt(); 
+			System.out.println("Saisir date dd/MM/yyyy");
+	        String date = sc.nextLine(); 
+			System.out.println("Saisir raison");
+	        String raison = sc.nextLine(); 
+			notedefrais e = new notedefrais(nom,somme,raison,date);
+			ListNote.add(e);
+		
+	}
+	
+	//_______________________________________
+	
+	
+	
+	
+	public static void trieDate() throws ParseException{
+		
+		Scanner sc = new Scanner(System.in);
+		
+		List<Date> tabDate = new ArrayList<Date>();	
+		  
+		for(int i = 0; i < ListNote.size(); i++) {  
+		
+			String sDate1 = ListNote.get(i).date;
+			
+			//sDate1(string) devien une Date
+			Date Date1 = new SimpleDateFormat("dd/MM/yyyy").parse(sDate1);
+			
+			tabDate.add(Date1);
+		}
+		tabDate.sort(null);
+		for(int i = 0; i < tabDate.size(); i++) {  
+			
+		System.out.println(tabDate.get(i));
+		
+		}
+		
+	}
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((date == null) ? 0 : date.hashCode());
+		return result;
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		notedefrais other = (notedefrais) obj;
+		if (date == null) {
+			if (other.date != null)
+				return false;
+		} else if (!date.equals(other.date))
+			return false;
+		return true;
+	}
+
+
+
+	public static void sommeNoteDeFraisTotal() {
+		int sum = 0;
+	
+	for(int i = 0; i < ListNote.size(); i++) {   
+		int a = ListNote.get(i).somme;
+		
+		sum = sum + a;
+	}
+	System.out.println("la somme est de "+ sum);
+	}
+	
+	
+}
+

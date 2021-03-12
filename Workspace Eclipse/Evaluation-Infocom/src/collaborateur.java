@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class collaborateur {
 	
-	String prenomCollab;
-	String nomCollab;
-	String societeCollab;
-	String postCollab;
+	private String prenomCollab;
+	private String nomCollab;
+	private String societeCollab;
+	private String postCollab;
 	
 	 static ArrayList<collaborateur> listCollab = new ArrayList<collaborateur>();	
 	

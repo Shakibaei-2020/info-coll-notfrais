@@ -1,9 +1,10 @@
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class accueil {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 	
 		// partie collaborateur
@@ -21,13 +22,11 @@ public class accueil {
 		**/
 
 		//partie notedefrais
-		notedefrais.addNoteDeFrais();
+		System.out.println("Saisir note de frais");
 		notedefrais.addNoteDeFrais();
 		notedefrais.addNoteDeFrais();
 		notedefrais.showNoteDeFrais();
-		notedefrais.sommeNoteDeFraisTotal();
-	
-	
+		notedefrais.fraisParMoisEtAnnee();
 	}
 
 }
