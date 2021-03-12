@@ -1,0 +1,79 @@
+import java.util.ArrayList;
+
+
+public class collaborateur {
+	
+	String prenomCollab;
+	String nomCollab;
+	String societeCollab;
+	String postCollab;
+	
+	 static ArrayList<collaborateur> listCollab = new ArrayList<collaborateur>();	
+	
+	 public collaborateur(String prenomCollab, String nomCollab, String societeCollab, String postCollab) {
+	        this.prenomCollab = prenomCollab;
+	        this.nomCollab = nomCollab;
+	        this.societeCollab = societeCollab;
+	        this.postCollab = postCollab;
+	    }
+	 
+	 
+	 public String getprenomCollab() {
+			return prenomCollab;
+		}
+	 
+	 public String setprenomCollab(String prenomCollab) {
+			return this.prenomCollab = prenomCollab;
+		}
+	 
+	 public String getnomCollab() {
+		 return nomCollab;
+	 }
+	 public String setnomCollab(String nomCollab) {
+		 return this.nomCollab = nomCollab;
+	 }
+	
+	 public String getsocieteCollab() {
+		 return societeCollab;
+	 }
+	 public String setsocieteCollab(String societeCollab) {
+		 return this.societeCollab = societeCollab;
+	 }
+	 
+	 public String setpostCollab() {
+		 return postCollab;
+	 }
+	 public String setpostCollab(String postCollab) {
+		 return this.postCollab = postCollab;
+	 }
+	 
+	 
+	 
+	 
+	 
+	public static void addCollab(collaborateur e) {
+		listCollab.add(e);
+	}
+	 
+
+	public static void deleteCollab(String p) {
+		for(int i =0; i < listCollab.size();i++) {
+			if(p.equals(listCollab.get(i))) {
+				
+			}
+		}
+	}
+	public static void updateCollab(String p) {
+		
+		for(int i =0; i < listCollab.size();i++) {
+			if(p.equals(listCollab.get(i))) {
+				
+			}
+		}
+	}
+	public static void showCollab() {
+		for(int i = 0; i < listCollab.size(); i++) {   
+			System.out.println(listCollab.get(0).nomCollab);		  
+	}
+	
+}

@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class accueil {
+
+	public static void main(String[] args) {
+		
+		collaborateur.addCollab();
+		collaborateur.showCollab();
+		
+	}
+
+}

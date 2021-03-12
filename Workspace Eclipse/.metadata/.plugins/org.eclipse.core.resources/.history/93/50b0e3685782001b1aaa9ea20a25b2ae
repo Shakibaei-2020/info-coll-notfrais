@@ -1,0 +1,30 @@
+import org.json.JSONObject;
+import org.json.JSONArray;
+
+public class monjson {
+
+	@SuppressWarnings("unchecked")
+	public static void main(String[]args) {
+		
+		
+		JSONObject obj = new JSONObject();
+		obj.put("nom","Mohammad");
+		obj.put("prix","50 euros");
+		
+		JSONArray list = new JSONArray();
+		list.add("JAVA");
+		list.add("JSP");
+		list.add("Servlets");
+		
+		obj.put("note_çde_frais",list);
+		
+		
+		
+		
+	
+
+
+
+		
+	}
+}

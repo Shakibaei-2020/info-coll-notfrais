@@ -1,0 +1,11 @@
+package snippet;
+
+public class Snippet {
+	•	Les données sensibles tel que les mots de passes doivent être cryptées.
+	•	Les saisies au sein des formulaires doivent être contrôlées.
+	•	Les fichiers fournis par l'utilisateur sont conservés dans une limite de 36 mois.
+	•	Les données récoltées doivent être sécurisé.
+	•	Les manipulations de l'administrateur doivent être vérifiées.
+	
+}
+

@@ -1,0 +1,7 @@
+import java.util.ArrayList;
+
+public class notedefrais {
+	
+	ArrayList<String> listFrais = new ArrayList<String>();
+
+}

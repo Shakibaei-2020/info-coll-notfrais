@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class notedefrais {
+	
+	ArrayList<String> listFrais = new ArrayList<String>();
+	
+	public static void deleteFrais(String p) {
+		
+	}
+	
+	public static void addFrais(String p) {
+		
+	}
+	
+	public static void updateFrais(String p) {
+		
+	}
+	
+	public static void showFrais() {
+		
+	}
+	
+	public int getNbCollab() {
+		return listFrais.size();
+	}
+	
+
+}

@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+public class collaborateur {
+
+	static ArrayList<String> listCollab = new ArrayList<String>();
+	
+	
+	public static void deleteCollab(String p) {
+		
+	}
+	
+	public static void addCollab(String p) {
+		listCollab.add(p);
+		
+	}
+	
+	public static void updateCollab(String p) {
+		
+	}
+	
+	public static void showCollab() {
+		
+	}
+	
+	public int getNbCollab() {
+		return listCollab.size();
+	}
+	
+}

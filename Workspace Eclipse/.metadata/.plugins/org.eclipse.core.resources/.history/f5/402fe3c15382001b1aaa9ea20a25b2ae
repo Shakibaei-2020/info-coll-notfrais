@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+
+public class collaborateur {
+
+	static ArrayList<String> listCollab = new ArrayList<String>();
+	
+	
+	public static void deleteCollab(String p) {
+		for(int i =0; i < listCollab.size();i++) {
+			
+			if(listCollab[i] == p) {
+				
+				System.out.println("L'utilisateur" + p +"delete");
+				
+			}
+		}
+	}
+	
+	public static void addCollab(String p) {
+		listCollab.add(p);
+		
+	}
+	
+	public static void updateCollab(String p) {
+		
+	}
+	
+	public static void showCollab() {
+		
+	}
+	
+	public int getNbCollab() {
+		return listCollab.size();
+	}
+	
+}

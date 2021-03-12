@@ -1,0 +1,58 @@
+import java.util.ArrayList;
+
+
+public class collaborateur {
+	
+	String prenomCollab;
+	String nomCollab;
+	String societe;
+	String postCollab;
+	
+	 static ArrayList<collaborateur> listCollab = new ArrayList<collaborateur>();	
+	
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	public static void deleteCollab(String p) {
+		for(int i =0; i < listCollab.size();i++) {
+			if(p == listCollab.get(i)) {
+				listCollab.remove(i);
+			}
+		}
+	}
+	
+	public static void addCollab(String p) {
+		listCollab.add(p);
+	}
+	
+	public static void updateCollab(String p) {
+		
+		for(int i =0; i < listCollab.size();i++) {
+			if(p.equals(listCollab.get(i))) {
+				listCollab.set(i, p);
+			}
+		}
+	}
+	
+	public static void showCollab() {
+		for(int i = 0; i < listCollab.size(); i++) {   
+		    System.out.print(listCollab.get(i));
+		}  
+	}
+	
+}

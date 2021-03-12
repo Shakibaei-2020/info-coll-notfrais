@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class accueil {
+
+	public static void main(String[] args) {
+		
+        Scanner sc = new Scanner(System.in); 
+        
+		collaborateur a = new collaborateur();
+		notedefrais b = new notedefrais();
+		
+		
+		
+		
+		
+		System.out.println("ajouter un collab");
+        String collab = sc.nextLine(); 
+
+		a.addCollab(collab);
+		a.showCollab();
+		
+		
+		
+		
+		b.leJSON();
+	}
+
+}

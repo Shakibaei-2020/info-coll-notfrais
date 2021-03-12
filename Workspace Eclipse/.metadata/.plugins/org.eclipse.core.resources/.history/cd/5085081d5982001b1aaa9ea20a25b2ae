@@ -1,0 +1,40 @@
+import org.json.JSONObject;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+import org.json.JSONArray;
+
+public class monjson {
+
+	@SuppressWarnings("unchecked")
+	public static void main(String[]args) {
+		
+		
+		JSONObject obj = new JSONObject();
+		obj.put("nom","Mohammad");
+		obj.put("prix","50 euros");
+		obj.put("raison","50 euros");
+		obj.put("date","12/02/2012");
+		
+		JSONArray list = new JSONArray();
+		list.add("Java");
+		list.add("JSP");
+		list.add("Servlets");
+		
+		obj.put("notedefrais",list);
+	
+		try(FileWriter file = new FileWriter("myJson.json")){
+			file.write(obj.toString());
+			file.flush();
+			
+		}catch(IOException e){
+			e.printStackTrace();
+			
+		}
+		
+		System.out.println(obj);
+		
+		
+	}
+}
