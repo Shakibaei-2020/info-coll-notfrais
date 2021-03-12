@@ -111,14 +111,4 @@ public class collaborateur {
 		collaborateur e = new collaborateur(nom,prenom,societe,post);
 		listCollab.add(e);
 	}
-
-
-
-	@Override
-	public String toString() {
-		return "collaborateur [prenomCollab=" + prenomCollab + ", nomCollab=" + nomCollab + ", societeCollab="
-				+ societeCollab + ", postCollab=" + postCollab + ", ntFrais=" + ntFrais + "]";
-	}
-	
-	
 }

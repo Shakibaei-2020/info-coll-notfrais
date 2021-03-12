@@ -316,13 +316,6 @@ public class notedefrais {
 		System.out.println("Nombre de personne avec des frais: "+ p );
 		System.out.println( "Somme total pour le mois: "+ sum);
 	}
-
-
-
-	@Override
-	public String toString() {
-		return "notedefrais [nom=" + nom + ", somme=" + somme + ", raison=" + raison + ", date=" + date + "]";
-	}
 	
 	
 }

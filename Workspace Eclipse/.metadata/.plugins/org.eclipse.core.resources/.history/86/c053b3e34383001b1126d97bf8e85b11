@@ -8,10 +8,7 @@ public class collaborateur {
 	private String nomCollab;
 	private String societeCollab;
 	private String postCollab;
-	
 	private List<notedefrais> ntFrais;
-	
-	
 	
 	 static ArrayList<collaborateur> listCollab = new ArrayList<collaborateur>();	
 	 
@@ -24,14 +21,6 @@ public class collaborateur {
 	 
 
 	 
-	 public List getList() {
-		 return ntFrais;
-		 
-	 }
-	 
-	 public void setList(List ntFrais) {
-		  this.ntFrais = ntFrais;
-	 }
 	 
 	 public String getprenomCollab() {
 			return prenomCollab;
@@ -111,14 +100,4 @@ public class collaborateur {
 		collaborateur e = new collaborateur(nom,prenom,societe,post);
 		listCollab.add(e);
 	}
-
-
-
-	@Override
-	public String toString() {
-		return "collaborateur [prenomCollab=" + prenomCollab + ", nomCollab=" + nomCollab + ", societeCollab="
-				+ societeCollab + ", postCollab=" + postCollab + ", ntFrais=" + ntFrais + "]";
-	}
-	
-	
 }
