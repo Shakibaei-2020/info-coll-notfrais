@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 
 public class notedefrais {
-	
+	// A reprendre les mêmes remarque que pour ta class collaborateur
 	public String nom;
 	public int somme;
 	public String raison;
